@@ -1,0 +1,121 @@
+.user {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 2.5rem;
+}
+
+.user-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hover-cam{
+    display: none;
+    width: 180px;
+    height: 180px;
+    padding: 10px;
+    background: cover;
+}
+
+.name-user {
+    font-size: 50px;
+    color: white;
+}
+
+.email-user{
+    font-size: var(--fs-2);
+    color: white;
+}
+
+.user-details {
+    gap: 1rem;
+    display: flex;
+    margin-top: 2rem;
+    flex-direction: column;
+}
+
+.camera-container {
+    cursor: pointer;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.icon-tabler-camera-plus {
+    padding: 0.5rem;
+    height: 100px;
+    width: 100px;
+    opacity: 0.6;
+}
+
+.camera-container:hover {
+    opacity: 1;
+}
+
+.img-input {
+    position: absolute;
+    width: 135px;
+    z-index: 1;
+    opacity: 0;
+    cursor: pointer;
+    padding: 5.5rem 2rem;
+    font-size: 0;
+}
+
+.follow-btn {
+    background-color: var(--clr-dark);
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.follow-btn-text {
+    color: var(--clr-white);
+    transition: opacity 0.1s;
+    font-size: var(--fs-2);
+}
+
+.follow-btn:hover {
+    cursor: pointer;
+}
+
+.follow-btn:hover .follow-btn-text {
+    opacity: 0.5;
+    transition: opacity 0.1s;
+}
+
+.followers-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.follow-container {
+    display: flex;
+    gap: 2rem;
+}
+
+@media screen and (max-width: 450px) {
+    .user {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .user-details {
+        margin-top: 0;
+        gap: 0;
+    }
+}

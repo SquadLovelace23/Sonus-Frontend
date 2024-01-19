@@ -1,0 +1,71 @@
+.album-wrapper {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+}
+
+.album-details-cover {
+    border-radius: 20px;
+    width: 300px;
+    height: 300px;
+    box-shadow: 0px 14px 30px -7px rgba(0,0,0,0.75);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.album-display-panel-content {
+    padding: 50px 75px;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    justify-content: center;
+}
+
+.album-name {
+    font-size: 5rem;
+    color: white;
+}
+
+.fav-album-icon {
+    z-index: 1;
+    position: relative;
+}
+
+.handle-like-album-wrapper {
+    width: 24px;
+    height: 24px;
+}
+
+.album-details-artist-name {
+    font-size: 2rem;
+    color: white;
+}
+
+.album-wrapper .icon-tabler-heart, .album-wrapper .icon-tabler-heart-filled {
+    top: 0px;
+    right: 0px;
+}
+
+@media screen and (max-width: 450px) { 
+    .album-display-panel-content {
+        padding: 40px 0px;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        justify-content: center;
+    }
+    .album-name {
+        font-size: 3rem;
+    }
+    .album-details-artist-name {
+        font-size: 1.5rem;
+    }
+    .album-wrapper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+    }
+}

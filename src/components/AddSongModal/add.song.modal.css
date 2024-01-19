@@ -1,0 +1,91 @@
+.song-action-wrapper {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.song-modal {
+    background-color: var(--clr-dark);
+    border: 1px solid var(--clr-black);
+    border-radius: 15px;
+    box-shadow: 0px 14px 30px -7px rgba(0,0,0,0.75);
+    padding: 10px 20px 20px 20px;
+    display: flex;
+    margin-top: 25px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    gap: 0.6rem;
+    right: -80px;
+    cursor: default;
+    z-index: 10;
+}
+
+.song-hidden-modal {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 1s, transform 1s;
+    pointer-events: none;
+}
+
+.song-visible-modal {
+    opacity: 1;
+    transition: opacity 1s, transform 1s;
+}
+
+.song-modal-titles {
+    color: var(--clr-white);
+    transition: color 0.2s;
+    text-align: center;
+    font-weight: var(--fw-3);
+    cursor: pointer;
+    width: 140px
+}
+
+.song-modal-titles:hover {
+    color: var(--primary-blue-dark);
+    transition: color 0.2s;
+}
+
+.modal-add-title {
+    color: #36363a;
+    border-bottom: 1px solid #36363a;
+    font-weight: var(--fw-3);
+    text-align: center;
+    width: 100%;
+}
+
+.not-found-title {
+    color: #36363a;
+    font-weight: var(--fw-3);
+    text-align: center;
+    width: 100%;
+    top: 5px;
+    position: relative;
+}
+
+@media screen and (max-width: 450px) { 
+    .song-hidden-modal {
+        opacity: 0;
+        transform: translateX(20px);
+        transition: opacity 1s, transform 1s;
+        pointer-events: none;
+    }
+    .song-modal {
+        background-color: var(--clr-dark);
+        border: 1px solid var(--clr-black);
+        border-radius: 15px;
+        box-shadow: 0px 14px 30px -7px rgba(0,0,0,0.75);
+        padding: 10px 20px 20px 20px;
+        display: flex;
+        margin-top: -25px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        gap: 0.6rem;
+        right: 30px;
+        cursor: default;
+        z-index: 10;
+    }
+}

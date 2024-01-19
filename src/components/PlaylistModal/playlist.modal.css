@@ -1,0 +1,137 @@
+.library-action-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 50px;
+}
+
+.playlist-modal {
+    background-color: var(--clr-dark);
+    border-radius: 15px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    gap: 1rem;
+    align-items: center;
+    right: 180px;
+    cursor: default;
+}
+
+.playlist-hidden-modal {
+    opacity: 0;
+    transform: translateX(20px);
+    transition: opacity 1s, transform 1s;
+    pointer-events: none;
+}
+
+.playlist-visible-modal {
+    opacity: 1;
+    transition: opacity 1s, transform 1s;
+}
+
+.upload-container {
+    cursor: pointer;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    margin-bottom: 132px;
+}
+
+.upload-container:hover {
+    opacity: 0.8;
+}
+
+.icon-tabler-upload {
+    padding: 0.5rem;
+    height: 100px;
+    width: 100px;
+    opacity: 0.6;
+}
+
+.modal-song-thumbnail {
+    height: 200px; 
+    width: 200px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.027);
+    box-shadow: 0px 8px 30px 0px rgba(0, 0, 0, 0.25);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.modal-btn {    
+    background-color: var(--clr-dark);
+    transition: background-color 0.2s;
+    border: 1px solid var(--clr-black);
+    height: 50px;
+    width: 180px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.modal-btn:hover {    
+    background-color: var(--clr-black);
+}
+
+.modal-btn-text {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--clr-white);
+    position: relative;
+}
+
+.modal-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.modal-input {
+    padding: 15px;
+    background-color: var(--clr-black);
+    border-radius: 10px;
+    width: 200px;
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+    border-inline: 2px solid transparent;
+    transition: border-inline 0.4s;
+    color: var(--clr-white);
+}
+
+.modal-input:focus {
+    outline: none;
+    border-inline: 2px solid var(--clr-white);
+}
+
+.modal-input:focus::placeholder {
+    opacity: 1;
+}
+
+.modal-input::placeholder {
+    opacity: 0.25;
+    transition: opacity 0.4s;
+    color: var(--primary);
+}
+
+@media screen and (max-width: 450px) { 
+    .playlist-modal {
+        right: 0px;
+        bottom: 35px;
+    }
+    .playlist-hidden-modal {
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: opacity 1s, transform 1s;
+        pointer-events: none;
+    }
+}

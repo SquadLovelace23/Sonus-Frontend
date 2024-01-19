@@ -1,0 +1,102 @@
+.songs-list-element {
+    border-radius: 15px;
+    padding: 10px 0px;
+    display: grid;
+    font-size: 1.25rem;
+    height: 60px;
+    grid-template-columns: repeat(3, 0fr);
+}
+
+.songs-list li:nth-child(odd) {
+    background-color: var(--clr-dark);
+}
+
+.songs-list li:nth-child(even) {
+    background-color: var(--clr-black);
+}
+
+.songs-list li:hover {
+    background-color: #2a2a2c;
+}
+
+.songs-list-text {
+    width: 190px
+}
+
+.songs-list-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    box-shadow: 0px 10px 10px -7px rgba(0,0,0,0.75);
+    margin-left: 30px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.songs-list-details-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 10rem;
+    align-items: center;
+    color: var(--clr-white);
+    margin-left: 4rem;
+}
+
+.songs-icons-wrapper {
+    display: flex;
+    gap: 1rem;
+    position: absolute;
+    right: 100px;
+    margin-top: 20px
+}
+
+@media screen and (max-width: 450px) { 
+    .songs-list-details-wrapper {
+        display: flex;
+        font-size: 0.8rem;
+        align-items: center;
+        color: var(--clr-white);
+        margin-left: 1rem;
+        gap: 0;
+        flex-wrap: wrap;
+    }
+    .songs-icons-wrapper {
+        display: flex;
+        gap: 1rem;
+        position: absolute;
+        right: 20px;
+        margin-top: 20px;
+    }
+    .songs-icons-wrapper .icon-tabler-heart{
+        top: 0px;
+        right: 0px;
+    }
+    .songs-icons-wrapper .icon-tabler-heart-filled{
+        top: 0px;
+        right: 0px;
+    }
+    .song-hidden-modal {
+        opacity: 0;
+        transform: translateX(20px);
+        transition: opacity 1s, transform 1s;
+        pointer-events: none;
+    }
+    .song-modal {
+        background-color: var(--clr-dark);
+        border: 1px solid var(--clr-black);
+        border-radius: 15px;
+        box-shadow: 0px 14px 30px -7px rgba(0,0,0,0.75);
+        padding: 10px 20px 20px 20px;
+        display: flex;
+        margin-top: -25px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        gap: 0.6rem;
+        right: 30px;
+        cursor: default;
+        z-index: 10;
+    }
+}

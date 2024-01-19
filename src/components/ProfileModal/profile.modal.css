@@ -1,0 +1,65 @@
+.profile-modal {
+    width: 80px;
+    background-color: var(--clr-dark);
+    border-radius: 15px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    margin-left: -125px;
+    justify-content: center;
+    position: fixed;
+    gap: 1rem;
+    align-items: center;
+    cursor: default;
+}
+
+.hidden-modal {
+    opacity: 0;
+    transform: translateX(20px);
+    transition: opacity 1s, transform 1s;
+    pointer-events: none;
+}
+
+.visible-modal {
+    opacity: 1;
+    transition: opacity 1s, transform 1s;
+}
+
+.corner-logo-img {
+    position: relative;
+    left: 50px;
+    top: 30px;
+    cursor: pointer;
+    display: flex;
+}
+
+.corner-items{
+    display: flex;
+    justify-content: space-between;
+}
+
+.corner-img {
+    width: 50px;
+    height: 43px;
+    background-image: url(https://res.cloudinary.com/du94mex28/image/upload/v1697795732/sonus/logo-white_i0egzm.png);
+    background-size: contain;
+}
+
+.corner-user-container {
+    gap: 1rem;
+    position: relative;
+    right: 50px;
+    top: 30px;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+}
+
+.corner-user {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 50px;
+    border-radius: 50%;
+    height: 50px;
+}

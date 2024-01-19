@@ -1,0 +1,58 @@
+.genre-wrapper {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+}
+
+.genre-details-cover {
+    border-radius: 20px;
+    height: 330px;
+    width: 100%;
+    background: linear-gradient(to bottom, rgb(24 24 24) 15%, rgb(28 28 28 / 70%) 70%, rgb(0 0 0 / 0%) 90%);
+}
+
+.genre-display-panel-content {
+    padding: 50px 75px;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    justify-content: center;
+}
+
+.genre-details-name {
+    font-size: 5rem;
+    color: white;
+}
+
+.genre-details {
+    position: absolute;
+    margin-bottom: 105px;
+}
+
+.fav-genre-icon {
+    z-index: 1;
+    position: relative;
+}
+
+.handle-like-genre-wrapper {
+    width: 24px;
+    height: 24px;
+}
+
+.genre-details-artist-name {
+    font-size: 2rem;
+    color: white;
+}
+
+@media screen and (max-width: 450px) { 
+    .genre-details-name {
+        font-size: 3rem;
+    }
+    .genre-details-artist-name {
+        font-size: 1.5rem;
+    }
+    .genre-display-panel-content {
+        padding: 40px 0px;
+        gap: 0rem;
+    }
+}

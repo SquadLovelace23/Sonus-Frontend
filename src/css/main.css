@@ -1,0 +1,221 @@
+/* RESET */
+a,
+      button,
+      input,
+      select,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      a,
+      * {
+        margin: 0;
+        padding: 0;
+        border: none;
+        text-decoration: none;
+        appearance: none;
+        background: none;
+        font-family: 'SF Pro';
+        scroll-behavior: smooth;
+        list-style: none;
+        color: inherit;
+}
+
+
+/* ROOT */
+:root {
+  --primary-blue-dark: #033e66;
+  --secondary-blue-dark: #033552b4;
+  --clr-dark: #161618;
+  --clr-black: #212124;
+  --clr-white: #ffffff;
+
+  --fs-1: 1rem;
+  --fs-2: 1.25rem;
+  --fs-3: 1.5rem;
+  --fs-4: 1.75rem;
+  --fs-5: 2rem;
+  --fs-max: 3.125rem;
+  
+  --fw-1: 300;
+  --fw-2: 500;
+  --fw-3: 700;
+  --fw-4: 900;
+}
+
+
+/* FONTS */
+@font-face {
+  font-family: 'SF Pro';
+  src: url('../assets/fonts/sfpro.woff2') format('woff2'),
+    url('../assets/fonts/sfpro.woff') format('woff');
+  font-display: swap;
+}
+
+
+/* SCROLLBAR */
+::-webkit-scrollbar {
+  width: 0.4rem;
+}
+::-webkit-scrollbar-track {
+  background: rgba(0, 6, 8, 0);
+  border-radius: 0.3rem;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to top, rgba(255,255,255,0) 10%, rgba(2,42,69,0.96) 50%, rgba(2,42,69,1) 40%, rgba(237,237,237,0) 90%);;
+  border-radius: 0.3rem;
+
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to top, rgba(255,255,255,0) 10%, rgba(0, 75, 126, 0.96) 50%, rgb(0, 77, 128) 40%, rgba(237,237,237,0) 90%);;
+}
+
+
+body {
+  background-color: var(--clr-black);
+}
+
+.icon{
+  cursor: pointer !important;
+  transition: color 0.2s !important;
+  color: var(--clr-white) !important;
+}
+
+.icon:hover {
+  cursor: pointer !important;
+  transition: color 0.2s !important;
+  color: var(--primary-blue-dark) !important; 
+}
+
+.swiper-button-prev, .swiper-button-next {
+  color: var(--clr-white) !important;
+}
+
+.active p, .active .icon{
+  color: var(--primary-blue-dark) !important; 
+}
+
+
+/* LOADING */
+.loader-wrapper {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 40%;
+}
+
+.dot-spinner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  --uib-speed: 0.9s;
+  height: 2.8rem;
+  width: 2.8rem;
+}
+
+@keyframes float {
+  0% {
+    transform: rotate(0deg) translate(100px) rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg) translate(100px) rotate(-360deg);
+  }
+}
+
+.dot-spinner__dot::before {
+  content: '';
+  height: 20%;
+  width: 20%;
+  border-radius: 50%;
+  background-color: #fff;
+  filter: drop-shadow(0 0 10px rgb(95, 150, 202));
+  box-shadow: -6px -6px 11px #c1c1c1,
+             6px 6px 11px #ffffff;
+  transform: scale(0);
+  opacity: 0.5;
+  animation: pulse0112 calc(var(--uib-speed) * 1.111) ease-in-out infinite;
+  box-shadow: 0 0 20px rgba(18, 31, 53, 0.3);
+}
+
+.dot-spinner__dot {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+  width: 100%;
+}
+
+.dot-spinner__dot:nth-child(2) {
+  transform: rotate(45deg);
+}
+
+.dot-spinner__dot:nth-child(2)::before {
+  animation-delay: calc(var(--uib-speed) * -0.875);
+}
+
+.dot-spinner__dot:nth-child(3) {
+  transform: rotate(90deg);
+}
+
+.dot-spinner__dot:nth-child(3)::before {
+  animation-delay: calc(var(--uib-speed) * -0.75);
+}
+
+.dot-spinner__dot:nth-child(4) {
+  transform: rotate(135deg);
+}
+
+.dot-spinner__dot:nth-child(4)::before {
+  animation-delay: calc(var(--uib-speed) * -0.625);
+}
+
+.dot-spinner__dot:nth-child(5) {
+  transform: rotate(180deg);
+}
+
+.dot-spinner__dot:nth-child(5)::before {
+  animation-delay: calc(var(--uib-speed) * -0.5);
+}
+
+.dot-spinner__dot:nth-child(6) {
+  transform: rotate(225deg);
+}
+
+.dot-spinner__dot:nth-child(6)::before {
+  animation-delay: calc(var(--uib-speed) * -0.375);
+}
+
+.dot-spinner__dot:nth-child(7) {
+  transform: rotate(270deg);
+}
+
+.dot-spinner__dot:nth-child(7)::before {
+  animation-delay: calc(var(--uib-speed) * -0.25);
+}
+
+.dot-spinner__dot:nth-child(8) {
+  transform: rotate(315deg);
+}
+
+.dot-spinner__dot:nth-child(8)::before {
+  animation-delay: calc(var(--uib-speed) * -0.125);
+}
+
+@keyframes pulse0112 {
+  0%,
+  100% {
+    transform: scale(0);
+    opacity: 0.5;
+  }
+
+  50% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

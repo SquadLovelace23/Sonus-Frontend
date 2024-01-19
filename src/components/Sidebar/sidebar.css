@@ -1,0 +1,139 @@
+.card-panel {
+    width: 25%;
+    position: absolute;
+    height: 100%;
+    background-color: var(--clr-dark);
+    backdrop-filter: blur(10px) saturate(150%);
+    overflow: hidden;
+}
+
+.control-panel-logo {
+    width: 170px;
+    background: url(https://res.cloudinary.com/du94mex28/image/upload/v1697795732/sonus/sonus-full-white-fa2_uyyc1c.png) no-repeat;
+    background-size: contain;
+    height: 60px;
+}
+
+.divider {
+    margin-bottom: 30px;
+    margin-top: 30px;
+    height: 2px;
+    background: url(https://res.cloudinary.com/du94mex28/image/upload/v1697795732/sonus/Line_3_b3tjw5.png) no-repeat;
+    background-size: contain;
+    width: 215px;
+}
+
+.control-panel-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10%;
+    gap: 0.45rem;
+}
+
+.song-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.song-thumbnail {
+    height: 200px; 
+    width: 200px;
+    margin-top: 25px;
+    border-radius: 15px;
+    box-shadow: 0px 8px 30px 0px rgba(0, 0, 0, 0.25);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.song-title{
+    color: var(--clr-white);
+    transition: 0.2s;
+}
+
+.song-artist {
+    color: var(--clr-white);
+    transition: 0.2s;
+}
+
+.player {
+    display: flex;
+    gap: 6vh;
+    padding-bottom: 2vh;
+    position: relative;
+    left: 45px;
+}
+
+.fav-icon {
+    z-index: 1;
+    position: relative;
+}
+
+.icon-tabler-heart-filled {
+    animation: keyframes-svg-filled 1s;
+    color: var(--primary-blue-dark) !important;
+    cursor: pointer;
+}
+
+.language-modal {
+    background-color: var(--clr-black);
+    border-radius: 15px;
+    padding: 10px;
+    display: flex;
+    z-index: 1;
+    margin-left: 40px;
+    margin-top: -40px;
+    position: fixed;
+    gap: 1rem;
+}
+
+.hidden-language-modal {
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: opacity 1s, transform 1s;
+    pointer-events: none;
+}
+
+.visible-language-modal {
+    opacity: 1;
+    transition: opacity 1s, transform 1s;
+}
+
+.flag {
+    width: 24px;
+    cursor: pointer;
+}
+
+.handle-like-wrapper {
+    width: 24px;
+    height: 24px;
+}
+
+.back {
+    bottom: 20px;
+    position: relative;
+    margin-right: 380px;
+}
+
+.shuffle-icon {
+    z-index: 1;
+    position: relative;
+    top: 285px;
+}
+
+@keyframes keyframes-svg-filled {
+    0% {
+      transform: scale(0);
+    }
+  
+    25% {
+      transform: scale(1.2);
+    }
+  
+    50% {
+      transform: scale(1);
+      filter: brightness(1.5);
+    }
+}
