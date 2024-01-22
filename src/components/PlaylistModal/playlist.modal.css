@@ -16,6 +16,7 @@
     align-items: center;
     right: 180px;
     cursor: default;
+    z-index: 1;
 }
 
 .playlist-hidden-modal {
