@@ -93,7 +93,7 @@
         flex-direction: column;
         flex: 1 1 auto;
         width: 190px;
-        bottom: 0;
+        bottom: 20px;
     }
     .rhap_repeat-button {
         left: 30px;

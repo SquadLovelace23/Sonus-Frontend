@@ -129,7 +129,7 @@ const MainCard = () => {
               loop={true}
               breakpoints={{
                 300: {
-                  slidesPerView: 2,
+                  slidesPerView: 1,
                 },
                 700: {
                   slidesPerView: 4,
