@@ -68,4 +68,4 @@ Sonus frontend is powered by an array of libraries and packages that make it a m
 
 5. **Accessibility with Keyboard:** Sonus is committed to accessibility. We've built the application with keyboard users in mind, so you can effortlessly navigate and control every aspect of the app with keyboard inputs.
 
-Experience the joy of music with Sonus frontend - your ultimate music companion. Enjoy every beat, and let the music take you on a journey like no other!
+Experience the joy of music with Sonus frontend - your ultimate music companion. Enjoy every beat, and let the music take you on a journey like no other !
