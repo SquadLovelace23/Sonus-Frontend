@@ -13,10 +13,10 @@ jest.mock("../context/PlayerContext", () => ({
   }),
 }));
 
-describe('Player component', () => {
-    test('renders play, pause, forward and previous buttons', () => {
-        render(<Player />);
+describe("Player component", () => {
+  test("renders play, pause, forward and previous buttons", () => {
+    render(<Player />);
 
-        screen.debug()
-    })
-})
+    screen.debug();
+  });
+});
