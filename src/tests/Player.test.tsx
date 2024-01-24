@@ -1,5 +1,4 @@
-/* eslint-disable no-unused-vars */
-import React from 'react';
+import React from "react";
 import { fireEvent, render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import Player from "../components/Player/Player";
@@ -26,15 +25,14 @@ jest.mock("../context/PlayerContext", () => ({
     currentSong: {
       url: "mocked-audio-url",
     },
-    setSong: jest.fn(),
+    setSong: mockSetSong,
     isShuffled: false,
   }),
 }));
 
 describe("Player component", () => {
-  test("renders play, pause, forward and previous buttons", () => {
+  test("renders play, pause, forward and previous buttons", (done) => {
     const mockLocation = {
-      pathname: "/mock-path",
       search: "?mock=query",
       state: { mockState: true },
       hash: "#mock-hash",
@@ -52,7 +50,10 @@ describe("Player component", () => {
     fireEvent.click(forwardBtn);
     fireEvent.click(previousBtn);
 
-    expect(mockSetSong).toHaveBeenCalled();
+    setTimeout(() => {
+      expect(mockSetSong).toHaveBeenCalledTimes(1);
+      done();
+    }, 0);
 
     screen.debug();
   });
