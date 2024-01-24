@@ -1,4 +1,4 @@
-const { VITE_API_URL} = import.meta.env
+const { VITE_API_URL } = import.meta.env
 
 import { Song } from "../interfaces/models.interfaces"
 
