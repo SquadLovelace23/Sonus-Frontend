@@ -2,12 +2,22 @@ import React from "react";
 import { fireEvent, render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import Player from "../components/Player/Player";
-import { useLocation as actualUseLocation } from 'react-router-dom';
+import { useLocation as actualUseLocation } from "react-router-dom";
+import * as songServices from "../services/song.service";
 
-jest.mock('../services/song.service');
+const mockSetSong = jest.fn();
 
-jest.mock('react-router-dom', () => ({
-  ...jest.requireActual('react-router-dom'), 
+jest.mock("../services/song.service", () => ({
+  getAllSongs: jest.fn(),
+  getLikedSongsByUserId: jest.fn(),
+  getSongByAlbum: jest.fn(),
+  getSongByArtist: jest.fn(),
+  getSongByGenre: jest.fn(),
+  getSongByPlaylist: jest.fn(),
+}));
+
+jest.mock("react-router-dom", () => ({
+  ...jest.requireActual("react-router-dom"),
   useLocation: jest.fn(),
 }));
 
@@ -31,7 +41,7 @@ describe("Player component", () => {
     };
 
     (actualUseLocation as jest.Mock).mockImplementation(() => mockLocation);
-    
+
     const { getByLabelText } = render(<Player />);
 
     const playPauseBtn = getByLabelText("Play");
@@ -41,6 +51,8 @@ describe("Player component", () => {
     fireEvent.click(playPauseBtn);
     fireEvent.click(forwardBtn);
     fireEvent.click(previousBtn);
+
+    expect(mockSetSong).toHaveBeenCalled();
 
     screen.debug();
   });
