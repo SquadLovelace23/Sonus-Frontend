@@ -1,5 +1,5 @@
 import React from "react";
-import { fireEvent, render, screen } from "@testing-library/react";
+import { fireEvent, render } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import Player from "../components/Player/Player";
 import { useLocation as actualUseLocation } from "react-router-dom";
@@ -46,6 +46,10 @@ describe("Player component", () => {
     const forwardBtn = getByLabelText("Skip");
     const previousBtn = getByLabelText("Previous");
 
+    expect(playPauseBtn).toBeInTheDocument();
+    expect(forwardBtn).toBeInTheDocument();
+    expect(previousBtn).toBeInTheDocument();
+
     fireEvent.click(playPauseBtn);
     fireEvent.click(forwardBtn);
     fireEvent.click(previousBtn);
@@ -55,6 +59,10 @@ describe("Player component", () => {
       done();
     }, 0);
 
-    screen.debug();
+    const progress = getByLabelText("Audio progress control").textContent;
+    expect(progress).toEqual("");
+
+    const volume = getByLabelText("Volume control").textContent;
+    expect(volume).toEqual("");
   });
 });
