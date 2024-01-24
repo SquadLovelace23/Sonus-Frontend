@@ -1,9 +1,7 @@
-import React from "react";
 import { fireEvent, render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import Player from "../components/Player/Player";
 import { useLocation as actualUseLocation } from "react-router-dom";
-import * as songServices from "../services/song.service";
 
 const mockSetSong = jest.fn();
 
