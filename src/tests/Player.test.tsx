@@ -1,4 +1,5 @@
-import { render, screen } from "@testing-library/react";
+import React from "react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import Player from "../components/Player/Player";
 
@@ -14,7 +15,15 @@ jest.mock("../context/PlayerContext", () => ({
 
 describe("Player component", () => {
   test("renders play, pause, forward and previous buttons", () => {
-    render(<Player />);
+    const { getByLabelText } = render(<Player />);
+
+    const playPauseBtn = getByLabelText("Play");
+    const forwardBtn = getByLabelText("Skip");
+    const previousBtn = getByLabelText("Previous");
+
+    fireEvent.click(playPauseBtn);
+    fireEvent.click(forwardBtn);
+    fireEvent.click(previousBtn);
 
     screen.debug();
   });
