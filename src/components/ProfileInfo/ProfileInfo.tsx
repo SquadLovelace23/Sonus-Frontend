@@ -1,3 +1,4 @@
+import React from 'react'
 import { useState, ChangeEvent, useEffect } from "react";
 import "./profile.info.css";
 import { useAuth0 } from "@auth0/auth0-react";

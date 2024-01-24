@@ -1,3 +1,4 @@
+import React from 'react';
 import './footer.css';
 import ait from '../../assets/svg/logo.svg'; 
 import { NavLink } from 'react-router-dom';

@@ -1,3 +1,4 @@
+import React from 'react'
 import { Link, NavLink } from "react-router-dom";
 import Player from "../../components/Player/Player";
 import Navbar from "../../components/Navbar/Navbar";

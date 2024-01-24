@@ -1,3 +1,4 @@
+import React from 'react';
 import { useEffect, useState } from 'react';
 import Footer from '../Footer/Footer';
 import ProfileModal from '../ProfileModal/ProfileModal';
@@ -6,7 +7,6 @@ import SongsComponent from '../SongsComponent/SongsComponent';
 import { Link, useParams } from 'react-router-dom';
 import { Album } from '../../interfaces/models.interfaces';
 import { getAlbumById, unlikeAlbum, updateUserLikes } from '../../services/album.service';
-import React from 'react';
 import { getSongByAlbum } from '../../services/song.service';
 import { useUserContext } from '../../utils/useUserContext';
 

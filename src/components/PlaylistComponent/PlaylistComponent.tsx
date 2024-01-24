@@ -1,3 +1,4 @@
+import React from 'react';
 import { useEffect, useState } from 'react';
 import Footer from '../Footer/Footer';
 import ProfileModal from '../ProfileModal/ProfileModal';
@@ -6,7 +7,6 @@ import SongsComponent from '../SongsComponent/SongsComponent';
 import { Playlist } from '../../interfaces/models.interfaces';
 import { getPlaylistById, unlikePlaylist, updateUserLikes } from '../../services/playlist.service';
 import { useParams } from 'react-router-dom';
-import React from 'react';
 import { getSongByPlaylist } from '../../services/song.service';
 import { useUserContext } from '../../utils/useUserContext';
 import { deletePlaylist } from '../../services/playlist.service';

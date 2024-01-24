@@ -1,3 +1,4 @@
+import React from 'react';
 import MainCard from "../MainCard/MainCard";
 import './card.container.css';
 

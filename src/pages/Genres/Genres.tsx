@@ -1,3 +1,4 @@
+import React from 'react'
 import GenreComponent from "../../components/GenreComponent/GenreComponent"
 
 function Genres() {

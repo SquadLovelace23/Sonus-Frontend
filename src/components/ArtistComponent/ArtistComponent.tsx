@@ -1,3 +1,4 @@
+import React from 'react';
 import { NavLink, useParams } from 'react-router-dom';
 import Footer from '../Footer/Footer';
 import ProfileModal from '../ProfileModal/ProfileModal';
@@ -5,7 +6,6 @@ import './artist.css';
 import { useState, useEffect } from 'react';
 import { getArtistById } from '../../services/artist.service';
 import { Album, Artist, Song } from '../../interfaces/models.interfaces';
-import React from 'react';
 import { getAlbumByArtist } from '../../services/album.service';
 import { getSongByArtist } from '../../services/song.service';
 import { usePlayer } from '../../context/PlayerContext';

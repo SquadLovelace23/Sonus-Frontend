@@ -1,9 +1,10 @@
+import React from 'react';
 import Footer from '../Footer/Footer';
 import ProfileModal from '../ProfileModal/ProfileModal';
 import './genre.css';
 import SongsComponent from '../SongsComponent/SongsComponent';
 import { useParams } from 'react-router-dom';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Genre } from '../../interfaces/models.interfaces';
 import { getGenreById } from '../../services/genre.service';
 import { getSongByGenre } from '../../services/song.service';

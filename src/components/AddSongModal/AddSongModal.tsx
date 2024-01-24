@@ -1,5 +1,6 @@
 import { useState, useEffect, FC } from "react";
 import "./add.song.modal.css";
+import React from 'react';
 import { useUserContext } from "../../utils/useUserContext";
 import { useAuth0 } from "@auth0/auth0-react";
 import { Playlist, Song } from "../../interfaces/models.interfaces";

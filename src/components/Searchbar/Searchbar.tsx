@@ -1,3 +1,4 @@
+import React from 'react'
 import { NavLink, useSearchParams } from "react-router-dom";
 import Footer from "../Footer/Footer";
 import ProfileModal from "../ProfileModal/ProfileModal";
