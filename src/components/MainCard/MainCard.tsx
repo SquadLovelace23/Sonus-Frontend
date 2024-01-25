@@ -3,7 +3,7 @@ import Footer from "../Footer/Footer";
 import ProfileModal from "../ProfileModal/ProfileModal";
 import "./main.card.css";
 import { useEffect, useState } from "react";
-import React from 'react';
+import React from "react";
 import { getAllArtists } from "../../services/artist.service";
 import {
   Album,
